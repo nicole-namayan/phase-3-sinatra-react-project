@@ -10,17 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_06_142321) do
+ActiveRecord::Schema.define(version: 2023_06_08_094256) do
 
   create_table "categories", force: :cascade do |t|
-    t.integer "photos_id"
     t.integer "ratings"
-    t.string "image"
+    t.string "location"
   end
 
   create_table "photos", force: :cascade do |t|
-    t.string "photographer"
-    t.string "location"
+    t.string "title"
+    t.string "image"
   end
 
 end
