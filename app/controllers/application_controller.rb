@@ -9,6 +9,10 @@ class ApplicationController < Sinatra::Base
     photos = Photo.all
     photos.to_json
   end
+  get '/photos/:id' do
+    photos = Photo.find(params[:id])
+    photos.to_json
+  end
   get "/categories" do
     categories = Category.all
     categories.to_json

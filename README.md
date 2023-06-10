@@ -97,6 +97,9 @@ After creating the project locally, you should also
 [create a repository on GitHub][create repo] to host your repo and help
 collaborate, if you're working with a partner.
 
+## Frontend Link
+https://github.com/nicole-namayan/pix-app.git
+
 ### Fetch Example
 
 Your React app should make fetch requests to your Sinatra backend! Here's an
