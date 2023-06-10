@@ -17,5 +17,25 @@ class ApplicationController < Sinatra::Base
     categories = Category.all
     categories.to_json
   end
+  post '/categories' do
+    categories = Category.create(
+    ratings: params[:ratings],
+    location: params[:location],
+    category_id: params[:category_id]
+  )
+  categories.to_json
+  end
+  patch '/photos/:id' do
+    photos = Photo.find(params[:id])
+  photos.update(
+    name: params[:name]
+  )
+  photos.to_json
+  end
+  delete '/photos/:id' do
+    photos = Photo.find(params[:id])
+    photos.destroy
+    photos.to_json
+  end
 
 end
